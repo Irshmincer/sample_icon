@@ -1,0 +1,40 @@
+
+<div>
+
+	<div class="main-div">
+		<div>
+
+			<mat-card >
+                <div class="img">
+                    <img src="../../assets/images/image.svg">
+
+                </div>
+			
+				<mat-card-content >
+					<form  [formGroup]="registration" >
+                        
+			
+						<mat-form-field   appearance="fill">
+                            <mat-label style="font-family: 'NTR', sans-serif;font-size: 12px;
+							">USERNAME</mat-label>
+							<input matInput style="font: normal normal 600 24px/29px Proxima Soft;" placeholder="Enter the email-id "  formControlName="email">
+						</mat-form-field><br/>
+				
+						<mat-form-field  appearance="fill">
+                            <mat-label style="font-family: 'NTR', sans-serif;font-size: 12px;
+							">PASSWORD</mat-label>
+
+							<input matInput type="password" style="font: normal normal 600 24px/29px Proxima Soft;color: #000000;" placeholder="Enter the Password" formControlName="password">
+						</mat-form-field>
+						<div class="button">
+							<button  mat-raised-button  color="warn" style="width:17em; background-color: rgba(0, 0, 0, 1)" (click)="login()">LOGIN</button>
+				
+						</div>
+					</form>
+			
+				</mat-card-content>
+			</mat-card>
+		</div>
+	</div>
+</div>
+
