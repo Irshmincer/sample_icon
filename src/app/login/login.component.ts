@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from './login.service';
 
 @Component({
@@ -18,12 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private service: LoginService,
     private route: Router,
-    private fb: FormBuilder,
-    private cookieService: CookieService
-  ) {
-    this.cookieService.set('Test', 'sample values are stored in cookies');
-    this.cookieValue = this.cookieService.get('Test');
-  }
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit(): void {}
 
