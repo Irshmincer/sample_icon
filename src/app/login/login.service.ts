@@ -1,13 +1,15 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoginService {
   baseUrl = 'https://next.fugamusic.com/api/v2';
+  cookie = this.cookieService.get('Test');
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private cookieService: CookieService) {}
 
   getLogin(name: any) {
     // const headerDict = {
@@ -26,7 +28,7 @@ export class LoginService {
 
   getAsset() {
     const headerDict = {
-      samplecookie: ``,
+      samplecookie: `${this.cookie}`,
     };
 
     const requestOptions = {
