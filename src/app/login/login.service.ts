@@ -12,17 +12,15 @@ export class LoginService {
   constructor(private http: HttpClient, private cookieService: CookieService) {}
 
   getLogin(name: any) {
-    // const headerDict = {
-    //   'Content-Type': 'application/json',
-    //   'access-control-expose-headers': 'Set-Cookie',
-    // };
+    const headerDict = {
+      'Content-Type': 'application/json',
+      'Access-Control-Expose-Headers': 'Set-Cookie',
+    };
 
-    // const requestOptions = {
-    //   headers: new HttpHeaders(headerDict),
-    // };z
-
-    return this.http.post(this.baseUrl + '/login', name, {
+    return this.http.post('https://iconbackends.fidisys.com/signin', name, {
       observe: 'response',
+      withCredentials: true,
+      headers: headerDict,
     });
   }
 

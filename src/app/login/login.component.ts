@@ -24,10 +24,13 @@ export class LoginComponent implements OnInit {
 
   login() {
     const form = {
-      name: 'sathish',
-      password: 'ILoveAudiotube1',
-      secure: true,
-      authType: 'session_and_jwt',
+      // name: 'sathish',
+      // password: 'ILoveAudiotube1',
+      // secure: true,
+      // authType: 'session_and_jwt',
+
+      username: 'user2',
+      password: 'password2',
     };
     this.service.getLogin(form).subscribe((x) => {
       console.log('Headers List');
