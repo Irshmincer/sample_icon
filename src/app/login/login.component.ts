@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
       // secure: true,
       // authType: 'session_and_jwt',
 
-      username: 'user2',
-      password: 'password2',
+      username: '',
+      password: '',
     };
     this.service.getLogin(form).subscribe((x) => {
       console.log('Headers List');
