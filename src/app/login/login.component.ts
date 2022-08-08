@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
       // secure: true,
       // authType: 'session_and_jwt',
 
-      username: '',
-      password: '',
+      username: 'genericGuy',
+      password: 'Ultr@S3cUr3!',
     };
     this.service.getLogin(form).subscribe((x) => {
       console.log('Headers List');
@@ -39,7 +39,15 @@ export class LoginComponent implements OnInit {
       console.log('Setcookie value = ' + x.headers.get('Set-Cookie'));
 
       console.log(this.cookieValue);
+
+      this.Asset();
       this.route.navigate(['/dashboard']);
+    });
+  }
+
+  Asset() {
+    this.service.getlogout().subscribe((x: any) => {
+      console.log(x);
     });
   }
 }

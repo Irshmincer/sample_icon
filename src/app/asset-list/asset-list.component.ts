@@ -25,9 +25,9 @@ export class AssetListComponent implements OnInit {
     console.log(this.result);
   }
 
-  getAssetList() {
-    this.service.getAsset().subscribe((x) => console.log(x));
-  }
+  // getAssetList() {
+  //   this.service.getAsset().subscribe((x) => console.log(x));
+  // }
 
   detailspage() {
     console.log('82');
